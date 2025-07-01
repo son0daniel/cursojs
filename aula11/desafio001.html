@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 001</title>
+</head>
+<body>
+    <h1>Passaporte</h1>
+    País: <input type="text" name="nacional" id="nacional">
+    <input type="button" value="Verificar" onclick="definir()">
+    <div id="res"></div>
+    <script>
+        
+
+        function definir () {
+            var txtnacional = document.querySelector('input#nacional')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Você é de ${txtnacional.value}</p>`
+            nacionalidade = txtnacional.value == 'Brasil' ? 'BRASILEIRO' : 'ESTRANGEIRO'
+
+            res.innerHTML += `<p>Você é <strong>${nacionalidade}</strong></p>`
+        }
+    </script>
+</body>
+</html>
